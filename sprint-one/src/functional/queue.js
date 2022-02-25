@@ -26,7 +26,6 @@ var Queue = function() {
     // should return the number of items in the queue
     return _.allKeys(storage).length;
   };
-  console.log(someInstance);
   return someInstance;
 };
 
