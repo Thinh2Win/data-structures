@@ -3,14 +3,13 @@ var Stack = function() {
 
   // Use an object with numeric keys to store values
   var storage = {};
-  var n = 0;
+  var front = 0;
   // Implement the methods below
   someInstance.push = function(value) {
     // add a string to the top of the stack
-    if (storage[n] === undefined) {
-      storage[n] = value;
-      n++;
-    }
+    storage[front] = value;
+    front++;
+
   };
 
   someInstance.pop = function() {
