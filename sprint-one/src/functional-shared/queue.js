@@ -34,7 +34,6 @@ queueMethods.enqueue = function(string) {
 
 };
 
-
 queueMethods.dequeue = function() {
   // Remove and return the string at the front of the queue
   if (this.back - this.front > 0) {

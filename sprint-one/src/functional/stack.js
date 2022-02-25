@@ -14,16 +14,17 @@ var Stack = function() {
 
   someInstance.pop = function() {
     // remove and return the string on the top of the stack
-    var keys = _.allKeys(storage);
-    var last = keys[keys.length - 1];
-    var holder = storage[last];
-    delete storage[last];
-    return holder;
+    if (front > 0) {
+      var holder = storage[front - 1];
+      delete storage[front];
+      front--;
+      return holder;
+    }
   };
 
   someInstance.size = function() {
     // return the number of items on the stack
-    return _.allKeys(storage).length;
+    return front;
   };
 
   return someInstance;
